@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+p,a{
+    font-size: 17px;
+}
+body {
+    background-color: #f5f5f5;
+  }
+  .container {
+     width: 100%; 
+    display: flex;
+    align-items: center;
+  }
+  .men-res{display:none}
+  /*Barras de header*/
+nav{
+    background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+    width: 100%;
+    height:80px;
+    display: flex;
+    position:fixed;
+    top: 0;
+    z-index: 100;
+    
+}
+.nav_label{display: none;}
+.logo{
+    font-size: 1.5em;
+    margin:0 30px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 900;
+}
+.navbar { 
+   right: 20px;
+   position: absolute;
+   
+}
+.nav_input{
+    display: none;
+}
+.list{
+    display:flex;
+}
+.list a{
+    letter-spacing: 2px;
+    list-style: none;
+    margin:0 10px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    position: relative;
+    display: block;
+}
+.list p{
+    color: #fff;
+    margin-top: 5px;
+}
+.list a:after{
+    content: " ";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: -5px;
+    height:2px;
+    width: 110%;
+    background:#fff ;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+}
+.list  a:hover:after{
+    /*animacion d-i*/
+    transform-origin: left;
+    transform: scaleX(1);
+    height:2px;
+}
+#perfil{
+    width: 100%;
+    padding-top: 80px;
+    background-image: url("img/FondoClaro.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    height: 100%;
+    background-attachment: fixed;
+} 
+.foto{
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border: 5px solid #4234b2;
+}
+.info-perfil{
+    margin: 50px 20px;
+    width: 60%;
+}
+/*redes sociales*/
+.red-social{
+    margin: 15px;
+}
+.red-social ul{
+    list-style: none;
+    margin: 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+/*pasatiempos*/
+.pasatiempos,.proyect{
+    padding-top: 80px;
+}
+
+.red-social h4{
+    font-size: 25px;
+}
+.red-social a {
+    text-decoration: none;
+    padding: 0 0.25rem;
+    margin:  0.5rem;
+    box-shadow: inset 0 0 0 0 #D65472;
+    transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    color: #D65472;
+    font-size: 20px;
+}
+.red-social a:hover {
+    color: white;
+    box-shadow: inset 110px 0 0 0 #D65472;
+  }
+  .acerca-d{
+    width: 80%;
+    margin: 0 auto;
+    text-align: end;
+}
+.acerca-d p{
+    text-align: end;
+}
+.proyectos{
+    display: grid;
+    grid-template-columns:  repeat(auto-fit, minmax(150px,1fr));
+    gap: 20px;
+}
+/*Skills*/
+.cards{
+    height:100px;
+    background: #f08e91;
+    box-shadow: 5px 5px 5px #aaaaaa;
+    margin: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.cards:hover{
+    transition:  .1s all;
+    box-shadow: 5px 5px 5px #7a7bed;
+    background: #f68084;
+    color: #ffffff;
+    
+}
+.box-container{
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+.box-container .box{
+      height:12rem ;
+      width: 19rem;
+      background:linear-gradient(120deg, #f5b1fc 0%, #fb8d9c 100%); ;
+      text-align: center;
+      border-radius:1rem;
+      box-shadow: 0 .3rem 5rem rgba(54, 53, 53, 0.5);
+      margin: 1.5rem;
+    color: #ffffff;}
+
+.box-container .box:hover{
+        background: transparent;
+        color: #084ce0;
+        border:1px solid #089fe0;
+        transition: 0.3s all;
+      }
+     
+     
+/*Seccion de formacion Academica*/
+.box-container .box i{
+        height: 3rem;
+        width: 3rem;
+        line-height: 3rem;
+        text-align: center;
+        border-radius:50%;
+        color: #ffffff;
+        font-size: 2rem;
+        margin-top: -1rem;
+        background:#4234b2;
+}
+.box-container h3{
+        font-size:20px;
+        color: #4234b2;
+        margin:  10px 0;
+}
+.box-container p {
+        padding:0 15px;   
+}
+/*experiencia*/
+#proyectos{
+    min-height: 10vh;
+    padding-top: 100px;
+}
+.experiencia{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+  }
+  .target-exp{
+    width: 90%;
+    min-height: 50px;
+    border: 2px solid #084ce0;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    color: #4234b2;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    transition: .2s all;
+  }
+  .target-exp:hover{
+    background:#084ce0;
+    box-shadow: 3px 5px 5px rgba(3, 32, 51, 0.8);
+    color: #fff;
+  }
+  .target-info{
+    width: 95%;
+    margin: 10px;
+    min-height: 50px;
+    background-size: cover;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 3px 5px 5px rgba(3, 32, 51, 0.8);
+     position: relative; 
+  }
+  .img-consul{
+    width: 100%;
+    border-radius: 10px ;
+    height: 100%;
+  } 
+  .informat{
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    padding: 6px;
+    box-sizing: border-box;
+    position: absolute;
+    background: rgb(27,27,27,0.8);
+    color:#fff ;
+    transition: 0.2s;
+  }
+  .informat h3{
+    margin-left: 10px;
+  }
+  .informat p{
+    margin-left: 20px;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .informat a{
+    text-decoration: none;
+    color: #ffffff;
+    margin-left: 20px;
+  }
+  .target-info:hover{
+    cursor: pointer;
+  }
+  .target-info:hover .informat{
+    height: 90px;
+    background: black;
+  }
+  .target-info:hover p, a{
+    opacity: 1;
+    visibility: visible;
+  }
+  /*contacto*/
+  #contacto{
+    width: 100%;
+    min-height:90vh;
+    background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+display: grid;
+    grid-template-columns:  repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+.form_container{
+    width: 100%;
+    display: grid;
+    gap: 1em;
+    grid-auto-columns: 100%;
+}
+.form_input-mess{
+    resize: none;
+    padding:1.8em  1em;
+    margin-bottom:.5em
+}
+.form{
+    background: #fff;
+    width: 70%;
+    border-radius: 1em;
+    padding: 3.5em 1.5em;
+    margin: auto;
+}
+.form_input{
+    font-size: 1rem;
+    padding:0.8em 1em;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    border:1px solid #bbb0b0;
+}
+.form-cta{
+        font-size: 1.5rem;
+        background-color: #089fe0;
+        color: #fff;
+        border: 3px;
+        font-weight: 400;
+        font-size: 1.5rem;
+        padding: 0.7em 0;
+        border-radius: 0.3em;
+        cursor: pointer;
+    }
+    .form-cta:hover{
+        background: transparent;
+        color: #089fe0;
+        border:2px solid #089fe0;
+        transition: 0.3s all;
+    }
+    .form_title{
+        justify-content: center;
+        display: flex;}
+   
+        footer{
+            width: 100%;
+            height: 150px;
+            background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+            color: #ffffff;
+        }
+        footer h3{
+            justify-content: center;
+            display: flex;
+        }
+        .redessc{
+            width:100%;
+            display: flex;
+        }
+        .redes-S{
+            justify-content: center;
+            display: flex;
+            height: 80px;
+            align-items: center;
+        }
+        .redes-S a{
+            margin: 5px 15px;
+            text-decoration: none;
+            color: #fff;
+            position: relative;
+            font-weight: 500;
+            font-size: 20px;
+        }
+        .redes-S a::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color:#fff;
+            bottom: 0;
+            left: 0;
+            transform-origin: right;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+          }
+          .redes-S a:hover::before {
+            transform-origin: left;
+            transform: scaleX(1);
+          }
+    .sect{
+        width: 70%;
+        max-width: 500%;
+        margin: auto;
+        border-radius: 20px;
+        background-image: url('img/contacto.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        height: 80%;
+    }
+    .fondo{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+@media(max-width:850px){
+    .nav_input{
+        display: none;
+    }
+    .nav_label{
+        display:block;
+        cursor: pointer;
+        font-size: 40px;
+        color: #fff;
+        position: absolute;
+        right:20px;
+    }
+    .list {
+        display: block;
+    }
+    .list a{
+        flex-direction: column;
+        margin-top: 40px;
+    }
+    .navbar{
+        position:fixed;
+        top: 80px;
+        bottom:0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: center;
+        clip-path: circle(0 at 100% 0);
+        transition: clip-path 0.5s;
+        z-index: 2;
+    }
+    .nav_input:checked + .navbar{
+        clip-path: circle(141.2% at 100% 0);
+    }
+    #contacto{
+        display: block;
+        min-height: auto;
+    }
+    .sect{
+        display: none;
+    }
+    .foto{
+        width: 250px;
+        height: 250px;
+         margin-top: 7%;
+    }
+    .list p{
+        margin-top: 30px;
+        width: 80%;
+    } 
+    .red-social ul{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .experiencia{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .informat{
+    height: 40px;}
+    .target-info:hover .informat{
+        height: 105px;
+      }
+}
+
+@media(max-width:700px){
+    .info-perfil{
+        width: 90%;
+    }
+    #perfil{
+        min-height: 10vh;
+        display: block; 
+    }
+    .sec-foto{
+        justify-content: center;
+        display: flex;   
+    }
+    .sect{
+        display: none;
+    }
+    .foto{
+        margin: 7% 0;
+    }      
+    .red-social ul{
+        display: block;
+    }
+    .red-social ul li{
+        margin: 15px 5px;
+    }
+    .info-perfil {
+        margin: 20px;}
+        .list a:after{
+            width: 60%;
+        }
+        #contacto{
+            padding: 80px 0 ;
+        }
+        .form{
+            padding: 2em 1.5em;
+        }
+        .proyectos{
+            gap: 0;
+        }
+        .experiencia{
+            grid-template-columns: repeat(1, 1fr);
+        }
+}
+  
+     
